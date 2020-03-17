@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import Colors from '../Colors';
+import Colors from '../../Colors';
 
 const Button = styled.button`
     background: ${(props) => (props.primary ? Colors.Pink : 'white')};

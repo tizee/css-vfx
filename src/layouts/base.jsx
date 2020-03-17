@@ -1,12 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
-import { lessImportant } from '../components/Colors';
+import { lessImportant } from '../Colors';
 
 const Container = styled.div`
     position: relative;
     height: 100%;
     width: 100%;
     min-height: 100vh;
+    min-width: 410px;
 `;
 
 const Wrapper = styled.div`
@@ -41,6 +42,7 @@ const LeftBlock = styled.div`
     position: absolute;
     top: 15px;
     left: 15px;
+    color: ${lessImportant};
     &::before {
         transition: transform ease-in 200ms;
         position: absolute;
@@ -48,6 +50,7 @@ const LeftBlock = styled.div`
         left: -20px;
     }
     &:hover {
+        color: inherit;
         &::before {
             transform: translateX(-10px);
         }

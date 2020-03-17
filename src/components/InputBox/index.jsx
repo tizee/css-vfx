@@ -1,6 +1,6 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
-import { lessImportant } from '../Colors';
+import { lessImportant } from '../../Colors';
 
 const FloatAnimationStyle = css`
     transition: all ease-in 200ms;
@@ -82,7 +82,7 @@ const InputField = (props) => {
                 onChange={props.handleInput}
                 value={props.value}
             />
-            <Label for={props.name}>{props.labelName}</Label>
+            <Label htmlFor={props.name}>{props.labelName}</Label>
         </Wrapper>
     );
 };

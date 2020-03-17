@@ -1,0 +1,18 @@
+@keyframes Spin {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.spin-icon {
+    object-fit: cover;
+    background: center / contain no-repeat url('./../../images/cursor.png');
+    height: 50px;
+    width: 50px;
+}
+
+.spin-wrapper {
+    animation: Spin 5s ease-in-out infinite alternate;
+}
