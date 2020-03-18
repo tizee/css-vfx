@@ -101,3 +101,50 @@ export const move = (arr, i, j) => {
     }
     return arr;
 };
+
+/**
+ * randomRange
+ * return random number in [min,max]
+ * @param {Number} min
+ * @param {Number} max
+ */
+export const randomRange = (min, max) => {
+    return (max - min + 1) * Math.random() + min;
+};
+
+/**
+ * Shuffle an Array in-place
+ * Fisher-Yates algorithm
+ * @param {Array} arr
+ */
+export const shuffle = (arr) => {
+    if (!Array.isArray(arr)) {
+        throw new TypeError('arr must be an Array.');
+    }
+    const n = arr.length;
+    let i = 0;
+    while (i <= n - 2) {
+        let j = Math.floor(randomRange(i, n - 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+        i++;
+    }
+    return arr;
+};
+
+export const copyArray = (src, dest) => {
+    let idx = -1,
+        length = src.length;
+    dest = dest || Array(length);
+    while (++idx < length) {
+        dest[idx] = src[idx];
+    }
+    return dest;
+};
+
+/**
+ * Shuffle an Array and return new shuffled Array
+ * @param {Array} arr
+ */
+export const shuffleNew = (arr) => {
+    return shuffle(copyArray(arr));
+};

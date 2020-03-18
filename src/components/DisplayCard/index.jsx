@@ -3,10 +3,7 @@ import styled from 'styled-components';
 import Card from '../Card';
 import TagCard from '../TagCard';
 
-const Wrapper = styled.div.attrs({
-    searchTags: (props) => props.searchTags,
-    customName: 'test',
-})`
+const Wrapper = styled.div`
     position: relative;
     display: grid;
     grid-template-rows: auto minmax(0px, 1fr);
