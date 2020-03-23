@@ -65,11 +65,6 @@ const config = {
                 ],
             },
             {
-                test: /\.css$/,
-                include: paths.src,
-                use: ['style-loader', 'css-loader', 'postcss-loader'],
-            },
-            {
                 test: /\.(png|svg|jp(e*)g|gif)$/,
                 include: paths.src,
                 use: [

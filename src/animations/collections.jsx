@@ -19,6 +19,7 @@ import FadeIn from './Fade-in-out';
 import CarouselScroll from './carousel-scroll';
 import TypeWriter from './Typewriter';
 import MasonaryLayout from './masonary-layout';
+import CarouselFade from './carousel-fade';
 
 const Collections = () => (
     <Fragment>
@@ -75,6 +76,9 @@ const Collections = () => (
         </Card>
         <Card name='Masonary Grid Layout' tags={['React', 'React-spring']}>
             <MasonaryLayout></MasonaryLayout>
+        </Card>
+        <Card name='Carousel Fade in' tags={['React']}>
+            <CarouselFade></CarouselFade>
         </Card>
     </Fragment>
 );
