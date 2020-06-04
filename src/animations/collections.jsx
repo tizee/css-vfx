@@ -20,9 +20,14 @@ import CarouselScroll from './carousel-scroll';
 import TypeWriter from './Typewriter';
 import MasonaryLayout from './masonary-layout';
 import CarouselFade from './carousel-fade';
+import Filter from './filter';
+import Clock from './clock';
 
 const Collections = () => (
     <Fragment>
+        <Card name='Filter' tags={['React']}>
+            <Filter />
+        </Card>
         <Card name='Number' tags={['React', 'React-spring']}>
             <NumberAni></NumberAni>
         </Card>
@@ -79,6 +84,9 @@ const Collections = () => (
         </Card>
         <Card name='Carousel Fade in' tags={['React']}>
             <CarouselFade></CarouselFade>
+        </Card>
+        <Card name='Clock' tags={['React']}>
+            <Clock />
         </Card>
     </Fragment>
 );

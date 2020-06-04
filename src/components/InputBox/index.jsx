@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import styled, { css } from 'styled-components';
 import { lessImportant } from '../../Colors';
 
@@ -72,9 +72,11 @@ const Input = styled.input`
 `;
 
 const InputField = (props) => {
+    const inputRef = useRef(null);
     return (
         <Wrapper>
             <Input
+                ref={inputRef}
                 type={props.type}
                 name={props.name}
                 id={props.id}
@@ -82,7 +84,14 @@ const InputField = (props) => {
                 onChange={props.handleInput}
                 value={props.value}
             />
-            <Label htmlFor={props.name}>{props.labelName}</Label>
+            <Label
+                htmlFor={props.name}
+                onClick={() => {
+                    inputRef.current.focus();
+                }}
+            >
+                {props.labelName}
+            </Label>
         </Wrapper>
     );
 };
