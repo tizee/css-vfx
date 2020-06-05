@@ -22,6 +22,7 @@ import MasonaryLayout from './masonary-layout';
 import CarouselFade from './carousel-fade';
 import Filter from './filter';
 import Clock from './clock';
+import Float from './float';
 
 const Collections = () => (
     <Fragment>
@@ -87,6 +88,9 @@ const Collections = () => (
         </Card>
         <Card name='Clock' tags={['React']}>
             <Clock />
+        </Card>
+        <Card name='float' tags={['React']}>
+            <Float />
         </Card>
     </Fragment>
 );
