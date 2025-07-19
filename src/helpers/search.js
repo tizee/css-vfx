@@ -54,7 +54,7 @@ function showAll() {
     return;
 }
 
-// Search by Name
+// Search by Name and tags
 export default function search(val) {
     if (!val || val.length < 1) {
         showAll();
@@ -65,7 +65,14 @@ export default function search(val) {
     // only show matched Elements
     items.forEach((item) => {
         let name = item.getAttribute('search-name').toLowerCase();
-        if (KMPcheck(name, val) >= 0) {
+        let tags = item
+            .getAttribute('search-tags')
+            .toLowerCase()
+            .split(',');
+        if (
+            KMPcheck(name, val) >= 0 ||
+            tags.some((el) => KMPcheck(el, val) >= 0)
+        ) {
             item.removeAttribute('aria-hidden');
         } else {
             item.setAttribute('aria-hidden', true);

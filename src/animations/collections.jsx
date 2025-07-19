@@ -23,6 +23,7 @@ import CarouselFade from './carousel-fade';
 import Filter from './filter';
 import Clock from './clock';
 import Float from './float';
+import CarouselCSS from './carousel-css';
 
 const Collections = () => (
     <Fragment>
@@ -91,6 +92,9 @@ const Collections = () => (
         </Card>
         <Card name='float' tags={['React']}>
             <Float />
+        </Card>
+        <Card name='Carousel CSS' tags={['React']}>
+            <CarouselCSS />
         </Card>
     </Fragment>
 );
